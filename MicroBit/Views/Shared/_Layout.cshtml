@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NitlaTech</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header style="background-color: #12DD7C">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/NitlaTech.jpeg" width="150" height="60" style="border-radius:10px 15px" alt="Alternate Text" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse float-left">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a id="Brand" class="nav-link text-dark font-weight-bolder" asp-area="" asp-controller="Home" asp-action="Index">NitlaTech</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse d-sm-inline-flex justify-content-between float-right" style="margin-left:50%">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item float-right">
+                            <a class="nav-link text-dark font-weight-bold" style="margin-left:15px">Bitcoin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark font-weight-bold" style="margin-left:15px">Microempresarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark font-weight-bold" style="margin-left:15px">Nuestros Productos</a>
+                        </li>
+                        <li class="nav-item float-right">
+                            <a class="nav-link text-dark font-weight-bold" style="margin-left:15px">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid"> 
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - MicroBit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
